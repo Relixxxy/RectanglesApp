@@ -1,12 +1,11 @@
-﻿
+﻿using Rects.Model;
+using Rects.Services.Interfaces;
 
-using Squares.Model;
+namespace Rects.Services;
 
-namespace Squares.Services;
-
-public static class PrinterService
+public class PrinterService : IPrinterService
 {
-    public static void PrintCoordinateSys(IList<Point> points, int size)
+    public void PrintCoordinateSys(IList<Point> points, int size)
     {
         int height = size;
         int width = size;
@@ -37,5 +36,14 @@ public static class PrinterService
         }
 
         Console.WriteLine(">");
+    }
+
+    public void PrintResult(IList<Rect> rects)
+    {
+        Console.WriteLine("Result");
+        foreach (var rect in rects)
+        {
+            Console.WriteLine(rect);
+        }
     }
 }

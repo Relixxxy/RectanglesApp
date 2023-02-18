@@ -1,4 +1,4 @@
-﻿namespace Squares.Model;
+﻿namespace Rects.Model;
 
 public class Line
 {
