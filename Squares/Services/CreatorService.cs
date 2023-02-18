@@ -1,10 +1,11 @@
-﻿using Squares.Model;
+﻿using Rects.Model;
+using Rects.Services.Interfaces;
 
-namespace Squares.Services;
+namespace Rects.Services;
 
-public static class CreatorService
+public class CreatorService : ICreatorService
 {
-    public static IList<Point> GeneratePoints(int size, int max)
+    public IList<Point> GeneratePoints(int size, int max)
     {
         var rand = new Random(DateTime.Now.Millisecond);
         var points = new List<Point>(size);
@@ -24,13 +25,13 @@ public static class CreatorService
         return points;
     }
 
-    public static IList<Line> CreateLines(IList<Point> initialPoints)
+    public IList<Line> CreateLines(IList<Point> initialPoints)
     {
         var lines = new List<Line>();
 
-        for (int i = 0; i < initialPoints.Count(); i++)
+        for (int i = 0; i < initialPoints.Count; i++)
         {
-            for (int j = i + 1; j < initialPoints.Count(); j++)
+            for (int j = i + 1; j < initialPoints.Count; j++)
             {
                 lines.Add(new (initialPoints[i], initialPoints[j]));
             }

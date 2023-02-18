@@ -1,15 +1,20 @@
-﻿using Squares.Services;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Rects;
+using Rects.Services;
+using Rects.Services.Interfaces;
 
-int max = 10;
-var initialPoints = CreatorService.GeneratePoints(20, max);
-
-PrinterService.PrintCoordinateSys(initialPoints, max);
-
-var lines = CreatorService.CreateLines(initialPoints);
-
-var squares = FinderService.FindSquares(lines);
-
-foreach (var square in squares)
+void ConfigureServices(ServiceCollection serviceCollection)
 {
-    Console.WriteLine(square);
+    serviceCollection
+        .AddTransient<IPrinterService, PrinterService>()
+        .AddTransient<ICreatorService, CreatorService>()
+        .AddTransient<IFinderService, FinderService>()
+        .AddTransient<App>();
 }
+
+var serviceCollection = new ServiceCollection();
+ConfigureServices(serviceCollection);
+var provider = serviceCollection.BuildServiceProvider();
+
+var app = provider.GetService<App>();
+app!.Start();

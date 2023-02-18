@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 
-namespace Squares.Model;
+namespace Rects.Model;
 
-public class Square
+public class Rect
 {
-	public Square(Line l1, Line l2)
+	public Rect(Line l1, Line l2)
 	{
 		Points = new List<Point>();
 
@@ -34,10 +34,10 @@ public class Square
 
     public override bool Equals(object? obj)
     {
-        var square = (obj as Square) !;
+        var rect = (obj as Rect) !;
 
-        var firstNotSecond = square.Points.Except(Points).ToList();
-        var secondNotFirst = Points.Except(square.Points).ToList();
+        var firstNotSecond = rect.Points.Except(Points).ToList();
+        var secondNotFirst = Points.Except(rect.Points).ToList();
 
 
         return !firstNotSecond.Any() && !secondNotFirst.Any();
