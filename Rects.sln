@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rects", "Squares\Rects.csproj", "{E27A7346-29E9-4551-B733-82F6719122F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rects", "RectanglesApp\Rects.csproj", "{88047E78-CF91-4338-B65D-F4D241013755}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E27A7346-29E9-4551-B733-82F6719122F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E27A7346-29E9-4551-B733-82F6719122F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E27A7346-29E9-4551-B733-82F6719122F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E27A7346-29E9-4551-B733-82F6719122F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88047E78-CF91-4338-B65D-F4D241013755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88047E78-CF91-4338-B65D-F4D241013755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88047E78-CF91-4338-B65D-F4D241013755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88047E78-CF91-4338-B65D-F4D241013755}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
