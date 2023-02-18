@@ -1,15 +1,7 @@
-﻿using Squares.Model;
-using Squares.Services;
+﻿using Squares.Services;
 
 int max = 10;
 var initialPoints = CreatorService.GeneratePoints(20, max);
-/*var initialPoints = new List<Point>()
-{
-    new(8,9),
-    new(2,3),
-    new(9,2),
-    new(3,8),
-};*/
 
 PrinterService.PrintCoordinateSys(initialPoints, max);
 
@@ -21,4 +13,3 @@ foreach (var square in squares)
 {
     Console.WriteLine(square);
 }
-

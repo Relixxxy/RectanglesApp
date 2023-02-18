@@ -45,7 +45,6 @@ public static class FinderService
         double y2 = line2.Points.First().Y - line2.Points.Last().Y;
         double x2 = line2.Points.First().X - line2.Points.Last().X;
 
-
         return y1 / x1 == y2 / x2;
     }
 

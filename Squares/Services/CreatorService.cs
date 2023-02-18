@@ -7,7 +7,7 @@ public static class CreatorService
     public static IList<Point> GeneratePoints(int size, int max)
     {
         var rand = new Random(DateTime.Now.Millisecond);
-        var points = new List<Point>(20);
+        var points = new List<Point>(size);
 
         for (int i = 0; i < size; i++)
         {
